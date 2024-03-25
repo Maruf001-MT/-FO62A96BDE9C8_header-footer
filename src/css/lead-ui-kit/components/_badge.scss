@@ -1,0 +1,48 @@
+.badge {
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: $font-weight-bold;
+    line-height: 1.14;
+}
+
+@each $color, $value in $theme-colors {
+
+    .badge-soft-#{$color} {
+
+        @include badge-soft-variant($value);
+
+        @if ($color == secondary){
+
+            color: $black;
+        }
+    }
+
+    .badge-outline-#{$color} {
+
+        @include badge-outline-variant($value);
+
+        @if ($color == secondary){
+
+            color: $black;
+        }
+    }
+
+    .badge-outline-soft-#{$color} {
+
+        @include badge-outline-soft-variant($value);
+
+        @if ($color == secondary){
+
+            color: $black;
+        }
+    }
+}
+
+.badge.badge-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    overflow: hidden;
+    padding: 0;
+    display: inline-block;
+}

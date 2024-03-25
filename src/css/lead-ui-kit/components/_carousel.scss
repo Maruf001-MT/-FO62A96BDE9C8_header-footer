@@ -1,0 +1,42 @@
+.carousel-indicators {
+    &.carousel-indicaors-dot {
+        li {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+
+            &.active {
+                width: 11px;
+                height: 11px;
+                border-top-width: 7.5px;
+                border-bottom-width: 7.5px;
+            }
+        }
+    }
+}
+
+.testimonial-carpusel {
+    @media (max-width: 767px) {
+        text-align: center;
+    }
+
+    .carousel-inner {
+        @media (min-width: 768px){
+            padding-left: 15%;
+            padding-right: 15%;
+        }
+    }
+
+    .carousel-control{
+        &-prev, &-next {
+            color: $black;
+
+            @media (max-width: 767px) {
+                position: static;
+                display: inline-block;
+                margin-top: 15px;
+                margin-bottom: 15px;
+            }
+        }
+    }
+}

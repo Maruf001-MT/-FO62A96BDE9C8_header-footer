@@ -1,0 +1,176 @@
+.nav-pills {
+    &.pricing-nav-pills-outline {
+        justify-content: center;
+    
+        .nav-link {
+            background-color: $white;
+            border: 1px solid #ececec;
+            padding: 17px 26px;
+            border-radius: 0;
+    
+            &:first-child {
+                border-top-left-radius: $border-radius;
+                border-bottom-left-radius: $border-radius;
+            }
+    
+            &:last-child {
+                border-top-right-radius: $border-radius;
+                border-bottom-right-radius: $border-radius;
+            }
+        }
+    
+        .nav-item {
+    
+            :first-child:last-child {
+                border-radius: 0;
+            }
+    
+            &:first-child .nav-link{
+                border-top-left-radius: $border-radius;
+                border-bottom-left-radius: $border-radius;
+            }
+    
+            &:last-child .nav-link {
+                border-top-right-radius: $border-radius;
+                border-bottom-right-radius: $border-radius;
+            }
+            
+        }
+    
+        .show > .nav-link, .nav-link.active {
+            background-color: $white;
+            border-color: theme-color('success');
+            color: theme-color('success');
+        }
+    }
+
+    &.pricing-nav-pills-boxed {
+        justify-content: center;
+
+        .nav-link {
+            border-style: solid;
+            border-color: #f7f8fb;
+            border-width: 6px 0;
+            background-color: #f7f8fb;
+            padding: 17px 26px;
+            border-radius: 0;
+
+            &:first-child {
+                border-top-left-radius: $border-radius;
+                border-bottom-left-radius: $border-radius;
+            }
+    
+            &:last-child {
+                border-top-right-radius: $border-radius;
+                border-bottom-right-radius: $border-radius;
+            }
+        }
+
+        .nav-item {
+    
+            :first-child:last-child {
+                border-radius: 0;
+            }
+    
+            &:first-child .nav-link{
+                border-top-left-radius: $border-radius;
+                border-bottom-left-radius: $border-radius;
+                border-left-width: 10px;
+            }
+    
+            &:last-child .nav-link {
+                border-top-right-radius: $border-radius;
+                border-bottom-right-radius: $border-radius;
+                border-right-width: 10px;
+            }
+            
+        }
+
+        .show > .nav-link, .nav-link.active {
+            background-color: $white;
+            color: $black;
+        }
+
+    }
+
+    &.pricing-nav-pills-switch {
+        justify-content: center;
+        
+        .nav-link {
+            background-color: $white;
+            border: 1px solid #ededed;
+            padding: 17px 30px;
+            border-radius: 0;
+    
+            &:first-child {
+                border-top-left-radius: $border-radius;
+                border-bottom-left-radius: $border-radius;
+            }
+    
+            &:last-child {
+                border-top-right-radius: $border-radius;
+                border-bottom-right-radius: $border-radius;
+            }
+
+            &:first-child {
+                border-top-left-radius: $border-radius;
+                border-bottom-left-radius: $border-radius;
+            }
+    
+            &:last-child {
+                border-top-right-radius: $border-radius;
+                border-bottom-right-radius: $border-radius;
+            }
+        }
+
+        .nav-item {
+    
+            :first-child:last-child {
+                border-radius: 0;
+            }
+    
+            &:first-child .nav-link{
+                border-top-left-radius: $border-radius;
+                border-bottom-left-radius: $border-radius;
+            }
+    
+            &:last-child .nav-link {
+                border-top-right-radius: $border-radius;
+                border-bottom-right-radius: $border-radius;
+            }
+            
+        }
+
+        .show > .nav-link, .nav-link.active {
+            background-color: #ededed;
+            color: $black;
+        }
+
+    }
+}
+
+.pricing-card-stack {
+    padding-top: 75px;
+
+    .featured {
+        z-index: 2;
+    }
+    @media(min-width: 991px){
+        .featured {
+            transform: scale(1.25);
+    
+            .card-body {
+                transform: scale(calc(1 / 1.25));
+            }
+        }
+    }
+}
+
+.tab-pane.active {
+    animation: slide-down 0.5s ease-out;
+}
+
+@keyframes slide-down {
+    0% { opacity: 0; transform: translateY(15%); }
+    100% { opacity: 1; transform: translateY(0); }
+}
